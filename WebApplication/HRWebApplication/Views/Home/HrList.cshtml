@@ -1,0 +1,31 @@
+﻿@using BOL;
+
+@{
+	ViewData["Title"] = "hr list page";
+}
+
+
+
+
+<div>
+
+	<h2>List of All Hr In Company</h2>
+
+	@{
+		
+
+		List<Hr> GetAllHrRecords = (List<Hr>)ViewData["theHr"];
+		<ol>
+			@foreach (Hr hr in GetAllHrRecords)
+			{
+				<li>@hr.FullName</li>
+			}
+
+
+		</ol>
+
+	}
+
+
+
+</div>
